@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <img src="~/images/populus100100png.png" />
+        <ul>
+            <li>
+                <a asp-action="Index" asp-controller="Home">Home</a>
+            </li>
+            <li>
+                <a asp-action="About" asp-controller="Custom">About</a>
+            </li>
+            <li>
+                <a asp-action="Contact" asp-controller="Custom">Contact</a>
+            </li>
+            <li>
+                <a asp-action="Projects" asp-controller="Custom">Projects</a>
+            </li>
+            <li>
+                <a asp-action="DoctorPage" asp-controller="Doctor">Doctor</a>
+            </li>
+            <li>
+                <a asp-action="GuessView" asp-controller="GuessController">Guess</a>
+            </li>
+        </ul>
+    </header>
+    <div id="content">
+        @RenderBody()
+    </div>
+    <footer>
+        <p>Copyright Emil Johansson @DateOnly.FromDateTime(DateTime.Now)</p>
+    </footer>
+</body>
+</html>

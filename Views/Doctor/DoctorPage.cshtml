@@ -1,0 +1,21 @@
+﻿@{
+    
+}
+<p>Input your temperature.</p>
+
+<div class="container">
+    <h2>Checking your temperature.</h2>
+    <div class="wrapper">
+        <h3>Temperature check.</h3>
+        <form asp-action="DoctorPage" asp-controller="Doctor" method="post">
+            <input type="number" name="temp" value="" placeholder="Enter your temperature." min="0" max="100" />
+            <input type="submit" />
+            <p>
+                @if (ViewBag.Msg != null)
+                {
+                    @ViewBag.Msg
+                }
+            </p>
+        </form>
+    </div>
+</div>
