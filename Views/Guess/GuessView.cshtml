@@ -3,13 +3,17 @@
 }
 <div class="container">
     <div class="wrapper">
-        <form asp-action="GuessIAR" asp-controller="GuessController">
+        <form asp-action="GuessView" asp-controller="Guess">
             <input type="number" name="guess" value="" placeholder="Enter your guess." min="0" max="100" />
             <input type="submit" />
             <p>
                 @if (ViewBag.Msg != null)
                 {
                     @ViewBag.Msg
+                }
+                @if (ViewBag.Num != null)
+                {
+                    @ViewBag.Num
                 }
             </p>
         </form>
