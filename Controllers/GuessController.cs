@@ -22,6 +22,10 @@ namespace MVC_assignment_Lexicon.Controllers
             {
                 HttpContext.Session.SetInt32("count", 0);
             }
+            if (HttpContext.Session.GetInt32("highscore") == null)
+            {
+                HttpContext.Session.SetInt32("highscore", 10);
+            }
             HttpContext.Session.SetInt32("count", (int)HttpContext.Session.GetInt32("count") + 1);
             if (guess == HttpContext.Session.GetInt32("rndNumber"))
             {
